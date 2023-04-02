@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "hyperloot-cc0-wars",
   "private": true,
   "scripts": {
     "build": "nuxt build",
