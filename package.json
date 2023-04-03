@@ -14,5 +14,7 @@
     "sass": "^1.60.0",
     "sass-loader": "^13.2.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@ubclaunchpad/vue-fathom": "^2.0.0"
+  }
 }
