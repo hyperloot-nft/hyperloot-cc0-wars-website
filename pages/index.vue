@@ -1,6 +1,7 @@
 <template>
 	<div>
 		test
-		<PagesHomeSignUp/>
+		<PagesHomeHero />
+		<PagesHomeSignUp />
 	</div>
 </template>
