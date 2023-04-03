@@ -56,10 +56,19 @@ onMounted(() => {
 	btnContainer.value.addEventListener('mousemove', updateOpacity);
 	window.addEventListener('resize', updateOpacity);
 
+	const onKeyUp = (event) => {
+		if (event.key === 'Escape') {
+			closeOverlay();
+		}
+	};
+
+	window.addEventListener('keyup', onKeyUp);
+
 	onUnmounted(() => {
 		bgContainer.value.removeEventListener('mousemove', updateOpacity);
 		btnContainer.value.removeEventListener('mousemove', updateOpacity);
 		window.removeEventListener('resize', updateOpacity);
+		window.removeEventListener('keyup', onKeyUp);
 	});
 });
 
