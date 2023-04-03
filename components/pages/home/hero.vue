@@ -16,41 +16,37 @@
 	</section>
 </template>
 
-<script>
-import { onUnmounted } from 'vue';
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
 
-export default {
-  mounted() {
-    const bgContainer = this.$refs.bgContainer;
-    const bgYellow = bgContainer.querySelector('.bg-yellow');
+const bgContainer = ref(null);
 
-    const updateOpacity = (event) => {
-      const { left, top, width, height } = bgContainer.getBoundingClientRect();
-      const x = event.clientX - left;
-      const y = event.clientY - top;
-      const centerX = width / 2;
-      const centerY = height / 2;
-      const distanceX = Math.abs(centerX - x);
-      const distanceY = Math.abs(centerY - y);
-      const distance = Math.sqrt(Math.pow(distanceX, 2) + Math.pow(distanceY, 2));
-      const maxDistance = Math.sqrt(Math.pow(centerX, 2) + Math.pow(centerY, 2));
-      const opacity = (maxDistance - distance) / maxDistance;
+onMounted(() => {
+  const bgYellow = bgContainer.value.querySelector('.bg-yellow');
 
-      bgYellow.style.opacity = opacity;
-    };
+  const updateOpacity = (event) => {
+    const { left, top, width, height } = bgContainer.value.getBoundingClientRect();
+    const x = event.clientX - left;
+    const y = event.clientY - top;
+    const centerX = width / 2;
+    const centerY = height / 2;
+    const distanceX = Math.abs(centerX - x);
+    const distanceY = Math.abs(centerY - y);
+    const distance = Math.sqrt(Math.pow(distanceX, 2) + Math.pow(distanceY, 2));
+    const maxDistance = Math.sqrt(Math.pow(centerX, 2) + Math.pow(centerY, 2));
+    const opacity = (maxDistance - distance) / maxDistance;
 
-    bgContainer.addEventListener('mousemove', updateOpacity);
+    bgYellow.style.opacity = opacity;
+  };
 
-    // Add a resize event listener to update the calculations when the browser is resized
-    window.addEventListener('resize', updateOpacity);
+  bgContainer.value.addEventListener('mousemove', updateOpacity);
+  window.addEventListener('resize', updateOpacity);
 
-    // Cleanup the event listeners when the component is unmounted
-    onUnmounted(() => {
-      bgContainer.removeEventListener('mousemove', updateOpacity);
-      window.removeEventListener('resize', updateOpacity);
-    });
-  },
-};
+  onUnmounted(() => {
+    bgContainer.value.removeEventListener('mousemove', updateOpacity);
+    window.removeEventListener('resize', updateOpacity);
+  });
+});
 </script>
 
 <style lang="scss">
