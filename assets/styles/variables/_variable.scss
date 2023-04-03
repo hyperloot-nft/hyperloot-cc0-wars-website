@@ -1,0 +1,46 @@
+/**
+*	global.scss
+*	This file contains global styles that are applied to the entire
+*	application. It includes typography, layout, and other general
+*	styling that affects multiple components or pages.
+**/
+
+// Container
+$container-width: 79.25rem; //1268px
+$side-spacing-lg: 1.75rem;
+$side-spacing-md: 1.5rem;
+$side-spacing-sm: 1.5rem;
+
+// Grid
+$grid-columns: 12;
+$grid-gutter-width: 1.75rem; // 28px
+
+// Grid Breakpoints
+$grid-breakpoints: (
+	xs: 370px,
+	sm: 576px,
+	ipad: 767px,
+	md: 979px,
+	lg: 1324px,
+);
+
+// Easing
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+$ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+// z-index
+$zindex-bg: -1;
+$zindex-content: 2;
+$zindex-dropdown: 90;
+$zindex-top: 100;
+$zindex-menu: 200;
+$zindex-full-screen: 1000;
+
+// Page Spacing
+$page-top-spacing: 9.25rem;
+$page-bottom-spacing: 13.625rem;
+$page-top-spacing-md: 6.25rem;
+$page-bottom-spacing-md: 6.25rem;
+$page-top-spacing-sm: 4.5rem;
+$page-bottom-spacing-sm: 4.5rem;
