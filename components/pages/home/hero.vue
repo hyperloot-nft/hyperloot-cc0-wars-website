@@ -10,8 +10,8 @@
 			<div class="btn-play-bg-effect" />
 		</div>
 		<div class="bg-container" ref="bgContainer">
-			<nuxt-img class="bg-yellow" src="/home//hyperloot-cc0wars-hero-yellow.jpg" preload quality="100" loading="lazy" />
-			<nuxt-img class="bg-blue" src="/home//hyperloot-cc0wars-hero-blue.jpg" preload quality="100" loading="lazy" />
+			<nuxt-img class="bg-yellow" src="/home//hyperloot-cc0wars-hero-yellow.jpg" preload quality="80" loading="lazy" />
+			<nuxt-img class="bg-blue" src="/home//hyperloot-cc0wars-hero-blue.jpg" preload quality="80" loading="lazy" />
 		</div>
 	</section>
 </template>
