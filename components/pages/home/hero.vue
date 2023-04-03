@@ -75,8 +75,6 @@ onMounted(() => {
 const isOverlayActive = ref(false);
 
 const onPlayBtnClick = () => {
-	console.log('Play button clicked');
-
 	isOverlayActive.value = true;
 };
 
