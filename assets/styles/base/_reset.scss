@@ -1,0 +1,50 @@
+/**
+* _reset.scss
+* This file contains SCSS reset styles to remove browser-specific
+* styling inconsistencies and provide a consistent baseline
+* for the project.
+*/
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	margin: 0;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+button
+input,
+input[type='text'],
+input[type='password'],
+input[type='email'],
+textarea,
+select {
+	font: inherit;
+	margin: 0;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+	// Remove shadow in ios
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 0;
+	box-shadow: none;
+	outline: none;
+}

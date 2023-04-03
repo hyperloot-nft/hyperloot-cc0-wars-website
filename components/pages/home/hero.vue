@@ -5,9 +5,7 @@
 </template>
 
 <style lang="scss">
-$test: red;
-
 .hero {
-	background-color: $test;
+	background-color: global.$test;
 }
 </style>
