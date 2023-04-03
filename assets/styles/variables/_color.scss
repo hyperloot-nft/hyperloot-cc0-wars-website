@@ -5,4 +5,37 @@
 *	and update the color scheme throughout the application.
 **/
 
-$test: pink;
+// -----------------------------------------------------------------------------
+// This file contains all the colors.
+// -----------------------------------------------------------------------------
+
+// Base
+$color-bg: #15161a;
+$color-bg-navbar: #0d0f12;
+
+// Text
+$color-text: rgba(#ffffff, 0.6);
+$color-text-white: #ffffff;
+$color-text-light: rgba(#ffffff, 0.8);
+$color-text-dark: rgba(#ffffff, 0.5);
+$color-text-darker: rgba(#ffffff, 0.4);
+$color-text-darkest: rgba(#ffffff, 0.25);
+$color-text-link: #dfb12d;
+$color-text-link-light: #f3ba14;
+
+// Colors
+$color-white: #ffffff;
+$color-yellow-light: #ffbd00;
+$color-yellow-dark: #deca19;
+$color-yellow-darker: #e5b01b;
+$color-black: #000000;
+$color-gray: #22232a;
+$color-gray-dark: #191A1F;
+$color-gray-light: #2b2d35;
+$color-gray-lighter: #383b46;
+$color-gray-lightest: #545763;
+
+// Social
+$color-social-twitter: #209BF0;
+$color-social-discord: #5965F5;
+$color-social-opensea: #2381E2;
