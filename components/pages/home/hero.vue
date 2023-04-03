@@ -1,7 +1,7 @@
 <template>
 	<section class="hero">
 		<div class="btn-play-container" ref="btnContainer">
-			<div class="btn-play">
+			<div class="btn-play" @click="onPlayBtnClick">
 				<svg class="icon-play" width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M4.692 0.523001L20.492 10.398C21.393 10.915 22 11.886 22 13C22 14.104 21.404 15.066 20.52 15.584L4.608 25.558L4.595 25.538C4.482 25.608 4.363 25.672 4.24 25.729C4.235 25.731 4.231 25.733 4.226 25.735C4.106 25.789 3.982 25.835 3.854 25.873C3.845 25.876 3.836 25.878 3.827 25.881C3.772 25.898 3.717 25.911 3.66 25.924C3.65 25.926 3.641 25.929 3.631 25.931C3.568 25.945 3.504 25.956 3.44 25.966C3.43 25.968 3.419 25.97 3.409 25.97C3.355 25.978 3.301 25.984 3.246 25.989C3.229 25.99 3.212 25.992 3.195 25.993C3.131 25.997 3.066 26 3 26C1.343 26 0 24.657 0 23V3C0 1.343 1.343 0 3 0C3.628 0 4.21 0.193001 4.692 0.523001Z" fill="#2A2D34"/>
 				</svg>
@@ -13,6 +13,7 @@
 			<nuxt-img class="bg-yellow" src="/home//hyperloot-cc0wars-hero-yellow.jpg" preload quality="80" loading="lazy" />
 			<nuxt-img class="bg-blue" src="/home//hyperloot-cc0wars-hero-blue.jpg" preload quality="80" loading="lazy" />
 		</div>
+		<Overlay v-if="isOverlayActive" videoID="sjPGsK5m3wM"/>
 	</section>
 </template>
 
@@ -61,6 +62,14 @@ onMounted(() => {
 		window.removeEventListener('resize', updateOpacity);
 	});
 });
+
+const isOverlayActive = ref(false);
+
+const onPlayBtnClick = () => {
+	console.log('Play button clicked');
+
+	isOverlayActive.value = true;
+};
 </script>
 
 <style lang="scss">
