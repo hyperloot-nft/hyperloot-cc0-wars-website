@@ -1,5 +1,5 @@
 <template>
-	<div class="overlay">
+	<div class="overlay" @click="$emit('onOverlayClick')">
 		<div class="overlay-background"/>
 		<iframe
 			class="video"
@@ -15,6 +15,8 @@
 const props = defineProps({
   videoID: String
 });
+
+const emit = defineEmits(['change', 'delete']);
 
 </script>
 
