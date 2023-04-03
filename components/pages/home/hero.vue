@@ -65,6 +65,7 @@ $bg-zindex-blue: 1;
 	display: flex;
 	background-color: global.$color-bg;
 	height: 70rem;
+	padding-top: 3rem;
 	overflow: hidden;
 }
 
@@ -103,7 +104,7 @@ $bg-zindex-blue: 1;
 .btn-play-container {
 	position: absolute;
 	z-index: $bg-zindex-content;
-	top: 56%;
+	top: 58%;
 	left: 51%;
 	transform: translate(-50%, -50%);
 }
@@ -114,9 +115,28 @@ $bg-zindex-blue: 1;
 	z-index: $bg-zindex-content + 2;
 	width: 5.5rem;
 	height: 5.5rem;
-	background-color: global.$color-white;
 	border-radius: 100%;
 	cursor: pointer;
+
+	&:after {
+		// Background color of the button
+		position: absolute;
+		z-index: $bg-zindex-content + 2;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: global.$color-white;
+		border-radius: 100%;
+		transition: transform 440ms global.$ease-out-quint;
+	}
+
+	&:hover {
+		&:after {
+			transform: scale(1.08);
+		}
+	}
 }
 
 .icon-play {
