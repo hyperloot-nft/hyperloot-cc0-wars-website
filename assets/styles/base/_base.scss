@@ -1,0 +1,22 @@
+/**
+*	_base.scss
+*	This file contains the base styles for the app, including typography,
+*	colors, buttons, and forms. It also includes any utility classes that
+*	are used throughout the app.
+*/
+
+@use '../variables/typography' as typography;
+@use '../variables/color' as color;
+
+ html {
+	font-family: typography.$font-family-base;
+	font-size: typography.$font-size-root;
+	font-weight: typography.$font-weight-medium;
+	color: color.$color-text;
+	line-height: typography.$font-line-height;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-variant-numeric: lining-nums;
+	background-color: color.$color-bg;
+ }
