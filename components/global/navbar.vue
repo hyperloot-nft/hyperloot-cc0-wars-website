@@ -77,6 +77,8 @@ a {
 
 	@include media('<=sm') {
 		justify-content: center;
+		margin-left: global.$side-spacing-sm;
+		margin-right: global.$side-spacing-sm;
 	}
 }
 
