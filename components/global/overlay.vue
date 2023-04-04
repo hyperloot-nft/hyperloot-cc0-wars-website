@@ -9,18 +9,11 @@
 			</svg>
 			<iframe
 				class="video"
-				:src="'https://www.youtube.com/embed/' + videoID"
-				allow="autoplay; encrypted-media"
-				frameborder="0"
-				allowfullscreen
-			/>
-			<!-- <iframe
-				class="video"
 				:src="'https://www.youtube.com/embed/' + videoID + '?autoplay=1'"
 				allow="autoplay; encrypted-media"
 				frameborder="0"
 				allowfullscreen
-			/> -->
+			/>
 		</div>
 	</div>
 </template>
