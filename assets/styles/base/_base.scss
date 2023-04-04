@@ -29,7 +29,7 @@ html {
 
 a {
 	color: color.$color-yellow;
-	transition: color 380ms $ease-out-quint;
+	transition: color 380ms variable.$ease-out-quint;
 }
 
 h1,
@@ -59,9 +59,14 @@ textarea {
 	color: color.$color-text;
 	border: 1px solid color.$color-form-border;
 	border-radius: variable.$border-radius-md;
+	transition: border-color 380ms variable.$ease-out-quint;
 
 	&::placeholder {
 		color: color.$color-form-placeholder;
+	}
+
+	&:focus {
+		border-color: color.$color-text-darker;
 	}
 }
 
