@@ -19,8 +19,8 @@
 </template>
 
 <style lang="scss" scoped>
-$top-spacing: 11.25rem;
-$bottom-spacing: 11.25rem;
+$top-spacing: 12rem;
+$bottom-spacing: 12rem;
 
 $work-border-color: #43444D;
 
