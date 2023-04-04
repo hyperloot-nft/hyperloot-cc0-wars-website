@@ -31,6 +31,7 @@ export default defineNuxtConfig({
 	},
 	modules: [
     	'@nuxt/image-edge',
+		'@nuxtjs/google-fonts',
 	],
 	vite: {
 		css: {
@@ -39,6 +40,11 @@ export default defineNuxtConfig({
 					additionalData: '@use "@/assets/styles/global.scss" as global;',
 				}
 			}
+		}
+	},
+	googleFonts: {
+		families: {
+			Vollkorn: [400, 500, 600],
 		}
 	}
 });

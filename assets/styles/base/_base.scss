@@ -8,7 +8,12 @@
 @use '../variables/typography' as typography;
 @use '../variables/color' as color;
 
- html {
+@font-face {
+	font-family: 'BluuNext-Bold';
+	src: url('/font/BluuNext-Bold.otf');
+}
+
+html {
 	font-family: typography.$font-family-base;
 	font-size: typography.$font-size-root;
 	font-weight: typography.$font-weight-medium;
@@ -19,14 +24,64 @@
 	text-rendering: optimizeLegibility;
 	font-variant-numeric: lining-nums;
 	background-color: color.$color-bg;
- }
+}
 
 a {
 	color: color.$color-yellow;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: typography.$font-family-heading;
+	letter-spacing: -(typography.$font-letter-spacing-sm);
+	line-height: typography.$font-line-height-sm;;
+}
+
 h2 {
 	font-size: typography.$font-size-h2;
 	font-weight: typography.$font-weight-bold;
-	line-height: 1.4;
+	color: color.$color-text-white;
+}
+
+input,
+input[type='text'],
+input[type='password'],
+input[type='email'],
+textarea {
+	padding-top: 0.75rem;
+	padding-bottom: 0.5625rem;
+	font-size: typography.$font-size-base;
+	color: color.$color-text;
+	border: 1px solid color.$color-form-border;
+	border-radius: $border-radius-md;
+
+	&::placeholder {
+		color: color.$color-form-placeholder;
+	}
+}
+
+::-moz-selection {
+	color: color.$color-bg;
+	background: color.$color-yellow;
+}
+
+::selection {
+	color: color.$color-bg;
+	background: color.$color-yellow;
+}
+
+button {
+	padding-top: 0.75rem;
+	padding-bottom: 0.5625rem;
+	padding-left: 1.125rem;
+	padding-right: 1.125rem;
+	background-color: color.$color-white;
+	font-family: typography.$font-family-base;
+	font-size: typography.$font-size-root;
+	font-weight: $font-weight-semibold;
+	border-radius: $border-radius-md;
+	cursor: pointer;
 }

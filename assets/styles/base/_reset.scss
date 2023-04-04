@@ -34,7 +34,6 @@ input[type='email'],
 textarea,
 select {
 	font: inherit;
-	margin: 0;
 }
 
 input[type='text'],
@@ -47,4 +46,14 @@ input[type='email'] {
 	border: 0;
 	box-shadow: none;
 	outline: none;
+}
+
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	text-align: center;
+	background: none;
+	border: 0;
 }
