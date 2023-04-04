@@ -72,8 +72,8 @@ a {
 		max-width: 100%;
 		margin-left: global.$side-spacing-sm;
 		margin-right: global.$side-spacing-sm;
-		padding-top: 1rem;
-		padding-bottom: 1rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
 	}
 }
 
