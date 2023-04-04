@@ -4,7 +4,9 @@
 		<form method="POST" @submit.prevent="onSignUpSubmit">
 			<label for="email">Email:</label>
 			<input type="text" name="email" placeholder="hello@cc0wars.com" required v-model.trim="email" @input="resetForm">
-			<button type="submit">Sign Up</button>
+			<RecaptchaChallengeV3 action="submit" v-model="captchaResponse">
+				<button type="submit">Sign Up</button>
+			</RecaptchaChallengeV3>
 		</form>
 		<div v-if="isFormSubmitted && !isEmailValid">Please enter a valid email.</div>
 		<div v-if="isFormSubmitted && isFormSubmitSuccess">Thank you.</div>
@@ -15,6 +17,7 @@
 <script setup>
 	const config = useRuntimeConfig();
 
+	const captchaResponse = ref('');
 	const email = ref('');
 	const isEmailValid = ref(false);
 	const isFormSubmitted = ref(false);
@@ -26,19 +29,20 @@
 	});
 
 	const onSignUpSubmit = (() => {
-		validateEmail();
+		console.log(captchaResponse.value);
+		// validateEmail();
 
-		isFormSubmitted.value = true;
+		// isFormSubmitted.value = true;
 
-		if (isEmailValid.value) {
-			signUpformReqeust().then((response) => {
-				isFormSubmitSuccess.value = true;
-				console.log(response);
-			}).catch((error) => {
-				console.log(error);
-				isFormSubmitSuccess.value = false;
-			})
-		}
+		// if (isEmailValid.value) {
+		// 	signUpformReqeust().then((response) => {
+		// 		isFormSubmitSuccess.value = true;
+		// 		console.log(response);
+		// 	}).catch((error) => {
+		// 		console.log(error);
+		// 		isFormSubmitSuccess.value = false;
+		// 	})
+		// }
 	});
 
 	const signUpformReqeust = (async () => {
