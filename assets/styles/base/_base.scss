@@ -28,6 +28,7 @@ html {
 
 a {
 	color: color.$color-yellow;
+	transition: color 380ms $ease-out-quint;
 }
 
 h1,
@@ -37,7 +38,7 @@ h4,
 h5 {
 	font-family: typography.$font-family-heading;
 	letter-spacing: -(typography.$font-letter-spacing-sm);
-	line-height: typography.$font-line-height-sm;;
+	line-height: typography.$font-line-height-xs;
 }
 
 h2 {
