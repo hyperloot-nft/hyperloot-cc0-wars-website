@@ -7,7 +7,7 @@
 				<input class="input-text" type="text" name="email" placeholder="Enter your email" required v-model.trim="email" @input="resetForm">
 				<button class="input-button" type="submit">Sign up</button>
 			</form>
-			<div class="form-response" v-if="isFormSubmitted">
+			<div class="form-response" v-if="isFormSubmitted && !isFormLoading">
 				<div class="form-success" v-if="isFormSubmitSuccess">Thank you.</div>
 				<div class="form-error" v-else>
 					<template v-if="!isEmailValid">Please enter a valid email.</template>
@@ -26,6 +26,7 @@
 	const isEmailValid = ref(false);
 	const isFormSubmitted = ref(false);
 	const isFormSubmitSuccess = ref(false);
+	const isFormLoading = ref(false);
 
 	const validateEmail = (() => {
 		const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -36,15 +37,18 @@
 		validateEmail();
 
 		isFormSubmitted.value = true;
+		isFormLoading.value = true;
 
 		if (isEmailValid.value) {
 			signUpformReqeust().then((response) => {
-				isFormSubmitSuccess.value = true;
-				console.log(response);
+				formSubmitSuccess();
 			}).catch((error) => {
-				console.log(error);
-				isFormSubmitSuccess.value = false;
+				// API error
+				formSubmtiFail();
 			})
+		} else {
+			// Email invalid
+			formSubmtiFail();
 		}
 	});
 
@@ -63,6 +67,16 @@
 	const resetForm = (() => {
 		isFormSubmitted.value = false;
 		isFormSubmitSuccess.value = false;
+	});
+
+	const formSubmtiFail = (() => {
+		isFormSubmitSuccess.value = false;
+		isFormLoading.value = false;
+	});
+
+	const formSubmitSuccess = (() => {
+		isFormSubmitSuccess.value = true;
+		isFormLoading.value = false;
 	});
 </script>
 
