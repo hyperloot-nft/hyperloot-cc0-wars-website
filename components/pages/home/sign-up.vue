@@ -5,7 +5,10 @@
 			<div class="description">Sign up today for a chance to be among the first to play HyperLoot: CC0 Wars beta and receive special in-game items and exclusive digital collectibles.</div>
 			<form class="form" method="POST" @submit.prevent="onSignUpSubmit">
 				<input class="input-text" type="text" name="email" placeholder="Enter your email" required v-model.trim="email" @input="resetForm">
-				<button class="input-button" type="submit">Sign up</button>
+				<button class="input-button" type="submit">
+					<template v-if="isFormLoading"><Loading /></template>
+					<template v-else>Sign up</template>
+				</button>
 			</form>
 			<div class="form-response" v-if="isFormSubmitted && !isFormLoading">
 				<div class="form-success" v-if="isFormSubmitSuccess">You're all set. Thank you!</div>
@@ -81,48 +84,113 @@
 </script>
 
 <style lang="scss" scoped>
-$top-spacing: 12rem;
-$bottom-spacing: 6rem;
+
+@import '@/assets/styles/media-query.scss';
 
 $signup-title-color: #e3efff;
 $signup-description-color: #6A798A;
 
 h2 {
-	margin-bottom: 0.75rem;
 	color: $signup-title-color;
+
+	@include media(">md") {
+		margin-bottom: 0.75rem;
+	}
+
+	@include media(">sm", '<=md') {
+		margin-bottom: 0.75rem;
+		font-size: global.$font-size-xxxl;
+	}
+
+	@include media('<=sm') {
+		color: global.$color-text-white;
+		margin-bottom: 0.75rem;
+		font-size: global.$font-size-xxxl;
+	}
 }
 
 .sign-up {
-	margin-top: $top-spacing;
-	margin-bottom: $bottom-spacing;
-	padding-top: 5rem;
+	display: flex;
+	width: 100%;
 	background-image: url('/home/hyperloot-cc0wars-signup-bg@2x.png');
 	background-size: 1268px 190px;
 	background-repeat: no-repeat;
 	background-position: top center;
+
+	@include media(">lg") {
+		margin-top: 12rem;
+		margin-bottom: 6rem;
+		padding-top: 5rem;
+	}
+
+	@include media(">sm", "<=lg") {
+		margin-top: 8rem;
+		margin-bottom: 5rem;
+		padding-top: 4rem;
+	}
+
+	@include media("<=sm") {
+		margin-top: 6rem;
+		margin-bottom: 6rem;
+		padding-top: 3rem;
+	}
 }
+
 
 .container {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	flex-direction: column;;
 	max-width: global.$container-width;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
+	align-items: center;
+
+	@include media('>lg') {
+		max-width: global.$container-width;
+		justify-content: space-between;
+	}
+
+	@include media('>sm', '<=lg') {
+		flex-direction: column;
+		margin-left: global.$side-spacing-sm;
+		margin-right: global.$side-spacing-sm;
+	}
+
+	@include media('<=sm') {
+		flex-direction: column;
+		margin-left: global.$side-spacing-sm;
+		margin-right: global.$side-spacing-sm;
+	}
 }
 
 .description {
 	max-width: 38.75rem;
-	margin-bottom: 2.25rem;
 	color: $signup-description-color;
+	text-align: center;
+
+	@include media('>md') {
+		margin-bottom: 2.25rem;
+	}
+
+	@include media('<=md') {
+		margin-bottom: 1.75rem;
+		font-size: global.$font-size-md;
+	}
 }
 
 .form {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	margin-bottom: 2rem;
+
+	@include media('>sm') {
+		margin-bottom: 2rem;
+	}
+
+	@include media('<=sm') {
+		margin-bottom: 1.25rem;
+	}
 }
 
 .form-response {
@@ -141,6 +209,7 @@ h2 {
 .agreement {
 	font-size: global.$font-size-xxxs;
 	color: $signup-description-color;
+	text-align: center;
 }
 
 .input-text {
@@ -153,6 +222,9 @@ h2 {
 }
 
 .input-button {
+	width: 5.75rem;
+	flex: 0 0 5.75rem;
+	color: global.$color-bg;
 	transition: opacity 380ms global.$ease-out-quint;
 
 	&:hover {
