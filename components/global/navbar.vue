@@ -2,10 +2,14 @@
 	<nav>
 		<div class="container">
 			<div class="hyperloot-logo">
-				<img src="/logo/hyperloot-icon-logo-transparent.png" alt="HyperLoot" />
+				<a href="https://hyperlootproject.com/" target="_blank">
+					<img src="/logo/hyperloot-logo-shape.svg" alt="HyperLoot" />
+				</a>
 			</div>
 			<div class="cc0-wars-logo">
-				<img src="/logo/hyperloot-cc0-wars-logo-transparent.png" alt="HyperLoot" />
+				<a href="https://cc0wars.com/">
+					<img class="cc0-wars-logo-image" src="/logo/hyperloot-cc0-wars-logo@2x.png" alt="HyperLoot: CC0 Wars" />
+				</a>
 			</div>
 			<div class="social">
 				<a href="https://www.youtube.com/@HyperLoot" target="_blank" class="social-link">
@@ -32,9 +36,19 @@
 </template>
 
 <style lang="scss" scoped>
+
 img {
 	width: 100%;
 }
+
+a {
+	transition: opacity 380ms global.$ease-out-quint;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
 .container {
 	display: flex;
 	align-items: center;
@@ -46,11 +60,23 @@ img {
 }
 
 .hyperloot-logo {
-	width: 3rem;
+	display: flex;
+
+	a {
+		display: flex;
+	}
 }
 
 .cc0-wars-logo {
-	width: 11.25rem;
+	a {
+		display: flex;
+	}
+}
+
+.cc0-wars-logo-image {
+	display: flex;
+	width: 12.375rem;
+	height: 3.375rem;
 }
 
 .social-link {
@@ -58,10 +84,6 @@ img {
 
 	&:not(:last-child) {
 		margin-right: 1.125rem;
-	}
-
-	&:hover {
-		opacity: 0.8;
 	}
 }
 </style>
