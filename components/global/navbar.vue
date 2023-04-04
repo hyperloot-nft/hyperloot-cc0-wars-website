@@ -70,6 +70,10 @@ a {
 .cc0-wars-logo {
 	a {
 		display: flex;
+
+		&:hover {
+			opacity: 0.88;
+		}
 	}
 }
 
