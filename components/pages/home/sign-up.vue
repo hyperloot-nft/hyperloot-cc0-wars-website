@@ -1,14 +1,19 @@
 <template>
 	<section class="sign-up">
-		<h2>Sign Up</h2>
+		<h2>Prepare for Battle</h2>
+		<div class="description">Sign up today for a chance to be among the first to play HyperLoot: CC0 Wars beta and receive special in-game items and exclusive digital collectibles.</div>
 		<form method="POST" @submit.prevent="onSignUpSubmit">
-			<label for="email">Email:</label>
-			<input type="text" name="email" placeholder="hello@cc0wars.com" required v-model.trim="email" @input="resetForm">
+			<input type="text" name="email" placeholder="Enter your email" required v-model.trim="email" @input="resetForm">
 			<button type="submit">Sign Up</button>
 		</form>
-		<div v-if="isFormSubmitted && !isEmailValid">Please enter a valid email.</div>
-		<div v-if="isFormSubmitted && isFormSubmitSuccess">Thank you.</div>
-		<div v-else-if="isFormSubmitted && !isFormSubmitSuccess && isEmailValid">Sorry, something went wrong. Please try again later.</div>
+		<div class="formResponse" v-if="isFormSubmitted">
+			<div class="successMsg" v-if="isFormSubmitSuccess">Thank you.</div>
+			<div class="errorMsg" v-else>
+				<template v-if="!isEmailValid">Please enter a valid email.</template>
+				<template v-else-if="!isFormSubmitSuccess">Sorry, something went wrong. Please try again later.</template>
+			</div>
+		</div>
+		<div class="agreement">By signing up, you agree to receive marketing emails from us.</div>
 	</section>
 </template>
 
@@ -58,3 +63,4 @@
 		isFormSubmitSuccess.value = false;
 	});
 </script>
+
