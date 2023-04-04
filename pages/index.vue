@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<PagesHomeHero />
+		<PagesHomeInfo />
 		<PagesHomeSignUp />
 	</div>
 </template>
