@@ -43,6 +43,11 @@ img {
 	width: 100%;
 }
 
+nav {
+	width: 100%;
+	display: flex;
+}
+
 a {
 	transition: opacity 380ms global.$ease-out-quint;
 
@@ -54,15 +59,24 @@ a {
 .container {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	max-width: global.$container-width;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 3.75rem;
 
-	@include media('>md', '<=lg') {
-		background-color: red;
+	@include media('>lg') {
+		max-width: global.$container-width;
+		justify-content: space-between;
+	}
+
+	@include media('>sm', '<=lg') {
+		justify-content: space-between;
+		margin-left: global.$side-spacing-sm;
+		margin-right: global.$side-spacing-sm;
+	}
+
+	@include media('<=sm') {
+		justify-content: center;
 	}
 }
 
@@ -71,6 +85,10 @@ a {
 
 	a {
 		display: flex;
+	}
+
+	@include media('<=sm') {
+		display: none;
 	}
 }
 
@@ -88,6 +106,12 @@ a {
 	display: flex;
 	width: 12.375rem;
 	height: 3.375rem;
+}
+
+.social {
+	@include media('<=sm') {
+		display: none;
+	}
 }
 
 .social-link {
