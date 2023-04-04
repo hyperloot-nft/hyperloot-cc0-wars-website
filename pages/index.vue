@@ -12,6 +12,7 @@ useServerSeoMeta({
   ogTitle: 'CC0 Wars | HyperLoot',
   description: 'Get ready to join the battle with HyperLoot in CC0 Wars! Coming soon to iOS and Android.',
   ogDescription: 'Get ready to join the battle with HyperLoot in CC0 Wars! Coming soon to iOS and Android.',
+  ogUrl: 'https://cc0wars.com',
   ogImage: 'https://cc0wars.com/hyperloot-cc0-wars-og-image-facebook.jpg',
   twitterImage: 'https://cc0wars.com/hyperloot-cc0-wars-og-image-twitter.jpg',
   twitterCard: 'summary_large_image',
