@@ -130,6 +130,11 @@ h2 {
 }
 
 .input-button {
+	transition: opacity 380ms global.$ease-out-quint;
+
+	&:hover {
+		opacity: 0.85;
+	}
 }
 </style>
 

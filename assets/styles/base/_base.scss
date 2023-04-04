@@ -5,6 +5,7 @@
 *	are used throughout the app.
 */
 
+@use '../variables/variable' as variable;
 @use '../variables/typography' as typography;
 @use '../variables/color' as color;
 
@@ -57,7 +58,7 @@ textarea {
 	font-size: typography.$font-size-base;
 	color: color.$color-text;
 	border: 1px solid color.$color-form-border;
-	border-radius: $border-radius-md;
+	border-radius: variable.$border-radius-md;
 
 	&::placeholder {
 		color: color.$color-form-placeholder;

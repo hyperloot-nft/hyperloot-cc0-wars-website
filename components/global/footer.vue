@@ -36,7 +36,8 @@
 .container {
 	display: flex;
 	justify-content: space-between;
-	width: global.$container-width;
+	max-width: global.$container-width;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 1.5rem;
@@ -46,6 +47,7 @@
 
 .social-link {
 	cursor: pointer;
+	transition: opacity 380ms global.$ease-out-quint;
 
 	&:not(:last-child) {
 		margin-right: 1.125rem;
