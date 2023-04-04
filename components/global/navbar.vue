@@ -37,6 +37,8 @@
 
 <style lang="scss" scoped>
 
+@import '@/assets/styles/media-query.scss';
+
 img {
 	width: 100%;
 }
@@ -57,6 +59,10 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 3.75rem;
+
+	@include media('>md', '<=lg') {
+		background-color: red;
+	}
 }
 
 .hyperloot-logo {

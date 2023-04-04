@@ -15,15 +15,6 @@ $side-spacing-sm: 1.5rem;
 $grid-columns: 12;
 $grid-gutter-width: 1.75rem; // 28px
 
-// Grid Breakpoints
-$grid-breakpoints: (
-	xs: 370px,
-	sm: 576px,
-	ipad: 767px,
-	md: 979px,
-	lg: 1324px,
-);
-
 // Easing
 $ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
 $ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
