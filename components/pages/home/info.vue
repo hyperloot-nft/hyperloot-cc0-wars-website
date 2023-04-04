@@ -75,7 +75,6 @@ h2 {
 
 	@include media('>lg') {
 		max-width: global.$container-width;
-		justify-content: space-between;
 	}
 
 	@include media('>sm', '<=lg') {
