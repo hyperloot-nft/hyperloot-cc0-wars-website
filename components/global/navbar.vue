@@ -139,6 +139,10 @@ a {
 	display: flex;
 	cursor: pointer;
 
+	svg {
+		display: flex;
+	}
+
 	&:not(:last-child) {
 		margin-right: 1.125rem;
 	}

@@ -22,8 +22,6 @@
 
 @import '@/assets/styles/media-query.scss';
 
-$top-spacing: 12rem;
-$bottom-spacing: 12rem;
 $work-border-color: #43444D;
 
 a {
@@ -49,8 +47,21 @@ h2 {
 .info {
 	display: flex;
 	width: 100%;
-	margin-top: $top-spacing;
-	margin-bottom: $bottom-spacing;
+
+	@include media(">lg") {
+		margin-top: 12rem;
+		margin-bottom: 12rem;
+	}
+
+	@include media(">sm", "<=lg") {
+		margin-top: 8rem;
+		margin-bottom: 8rem;
+	}
+
+	@include media("<=sm") {
+		margin-top: 4rem;
+		margin-bottom: 6rem;
+	}
 }
 
 .container {
