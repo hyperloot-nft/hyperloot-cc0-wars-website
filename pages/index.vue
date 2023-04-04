@@ -12,7 +12,7 @@ useServerSeoMeta({
   ogTitle: 'CC0 Wars | HyperLoot',
   description: 'Prepare to take part in the CC0 Wars! Coming to your mobile soon.',
   ogDescription: 'Prepare to take part in the CC0 Wars! Coming to your mobile soon.',
-  ogImage: '',
+  ogImage: 'https://hyperloot-cc0-wars-website-git-feat-signup-hyperloot.vercel.app/home/hyperloot-cc0wars-hero-blue.jpg',
   twitterCard: 'summary_large_image',
 });
 </script>
