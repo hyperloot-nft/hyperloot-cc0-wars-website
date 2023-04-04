@@ -23,6 +23,7 @@ export default defineNuxtConfig({
 	},
 	runtimeConfig: {
 		public: {
+			fathomSiteId: '',
 			hyperloot: {
 				apiBase: '',
 			},

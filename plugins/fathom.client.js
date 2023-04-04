@@ -3,7 +3,7 @@ import VueFathom from '@ubclaunchpad/vue-fathom';
  
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(VueFathom, {
-    siteID: 'GSXGSTZN',
+    siteID: nuxtApp.$config.public.fathomSiteId,
     settings: {
       spa: 'history',
     },

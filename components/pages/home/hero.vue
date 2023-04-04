@@ -13,7 +13,7 @@
 			<nuxt-img class="bg-yellow" src="/home//hyperloot-cc0wars-hero-yellow.jpg" preload quality="80" loading="lazy" />
 			<nuxt-img class="bg-blue" src="/home//hyperloot-cc0wars-hero-blue.jpg" preload quality="80" loading="lazy" />
 		</div>
-		<Overlay v-if="isOverlayActive" videoID="sjPGsK5m3wM" @on-overlay-click="closeOverlay"/>
+		<Overlay v-if="isOverlayActive" videoID="sjPGsK5m3wM" @close-overlay="closeOverlay"/>
 	</section>
 </template>
 
