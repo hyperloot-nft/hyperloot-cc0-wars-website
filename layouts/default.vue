@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<GlobalNavbar />
+		<Navbar />
 		<slot />
 		<Footer />
 	</div>
