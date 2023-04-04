@@ -3,13 +3,13 @@
 		<div class="container">
 			<h2>Prepare for Battle</h2>
 			<div class="description">Sign up today for a chance to be among the first to play HyperLoot: CC0 Wars beta and receive special in-game items and exclusive digital collectibles.</div>
-			<form method="POST" @submit.prevent="onSignUpSubmit">
-				<input type="text" name="email" placeholder="Enter your email" required v-model.trim="email" @input="resetForm">
-				<button type="submit">Sign Up</button>
+			<form class="form" method="POST" @submit.prevent="onSignUpSubmit">
+				<input class="input-text" type="text" name="email" placeholder="Enter your email" required v-model.trim="email" @input="resetForm">
+				<button class="input-button" type="submit">Sign up</button>
 			</form>
-			<div class="formResponse" v-if="isFormSubmitted">
-				<div class="successMsg" v-if="isFormSubmitSuccess">Thank you.</div>
-				<div class="errorMsg" v-else>
+			<div class="form-response" v-if="isFormSubmitted">
+				<div class="form-success" v-if="isFormSubmitSuccess">Thank you.</div>
+				<div class="form-error" v-else>
 					<template v-if="!isEmailValid">Please enter a valid email.</template>
 					<template v-else-if="!isFormSubmitSuccess">Sorry, something went wrong. Please try again later.</template>
 				</div>
@@ -83,7 +83,7 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: global.$container-width;
+	max-width: global.$container-width;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -91,11 +91,45 @@ h2 {
 
 .description {
 	max-width: 38.75rem;
+	margin-bottom: 2.25rem;
 	color: global.$color-text-darker;
+}
+
+.form {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+.form-response {
+	margin-bottom: 0.5rem;
+	font-size: global.$font-size-sm;
+}
+
+.form-success {
+	color: global.$color-green;
+}
+
+.form-error {
+	color: global.$color-red;
 }
 
 .agreement {
 	font-size: global.$font-size-xxxs;
+	color: global.$color-text-darkest;
+}
+
+.input-text {
+	max-width: 17.5rem;
+	width: 100%;
+	margin-right: 1rem;
+	padding-left: 1.125rem;
+	padding-right: 1.125rem;
+	background-color: global.$color-form-bg;
+}
+
+.input-button {
 }
 </style>
 
