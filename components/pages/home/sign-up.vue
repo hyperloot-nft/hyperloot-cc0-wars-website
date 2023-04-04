@@ -66,7 +66,7 @@
 	});
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $top-spacing: 5rem;
 $bottom-spacing: 6rem;
 
