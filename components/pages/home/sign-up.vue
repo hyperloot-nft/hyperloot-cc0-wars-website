@@ -219,7 +219,9 @@ h2 {
 }
 
 .input-button {
-	flex-shrink: 0;
+	width: 5.75rem;
+	flex: 0 0 5.75rem;
+	color: global.$color-bg;
 	transition: opacity 380ms global.$ease-out-quint;
 
 	&:hover {
