@@ -81,16 +81,25 @@
 </script>
 
 <style lang="scss" scoped>
-$top-spacing: 5rem;
+$top-spacing: 12rem;
 $bottom-spacing: 6rem;
+
+$signup-title-color: #e3efff;
+$signup-description-color: #6A798A;
 
 h2 {
 	margin-bottom: 0.75rem;
+	color: $signup-title-color;
 }
 
 .sign-up {
 	margin-top: $top-spacing;
 	margin-bottom: $bottom-spacing;
+	padding-top: 5rem;
+	background-image: url('/home/hyperloot-cc0wars-signup-bg@2x.png');
+	background-size: 1268px 190px;
+	background-repeat: no-repeat;
+	background-position: top center;
 }
 
 .container {
@@ -106,7 +115,7 @@ h2 {
 .description {
 	max-width: 38.75rem;
 	margin-bottom: 2.25rem;
-	color: global.$color-text-darker;
+	color: $signup-description-color;
 }
 
 .form {
@@ -131,7 +140,7 @@ h2 {
 
 .agreement {
 	font-size: global.$font-size-xxxs;
-	color: global.$color-text-darkest;
+	color: $signup-description-color;
 }
 
 .input-text {
