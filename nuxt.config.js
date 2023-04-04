@@ -27,14 +27,10 @@ export default defineNuxtConfig({
 			hyperloot: {
 				apiBase: '',
 			},
-			recaptcha: {
-				v3SiteKey: '6LfzW1klAAAAAEDA8rdOaDJbyHbKUZhTgrRb4OK9',
-			},
 		}
 	},
 	modules: [
     	'@nuxt/image-edge',
-		'vue-recaptcha/nuxt',
 	],
 	vite: {
 		css: {

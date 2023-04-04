@@ -15,7 +15,6 @@
     "sass-loader": "^13.2.2"
   },
   "dependencies": {
-    "@ubclaunchpad/vue-fathom": "^2.0.0",
-    "vue-recaptcha": "^3.0.0-alpha.4"
+    "@ubclaunchpad/vue-fathom": "^2.0.0"
   }
 }
