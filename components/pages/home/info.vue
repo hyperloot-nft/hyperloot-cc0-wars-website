@@ -26,10 +26,6 @@ $top-spacing: 12rem;
 $bottom-spacing: 12rem;
 $work-border-color: #43444D;
 
-h2 {
-	line-height: global.$font-line-height-sm;
-}
-
 a {
 	color: global.$color-text-dark;
 
@@ -39,6 +35,8 @@ a {
 }
 
 h2 {
+	line-height: global.$font-line-height-sm;
+
 	@include media(">sm", '<=md') {
 		font-size: global.$font-size-xxxl;
 	}

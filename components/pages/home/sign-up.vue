@@ -81,18 +81,36 @@
 </script>
 
 <style lang="scss" scoped>
+
+@import '@/assets/styles/media-query.scss';
+
 $top-spacing: 12rem;
 $bottom-spacing: 6rem;
-
 $signup-title-color: #e3efff;
 $signup-description-color: #6A798A;
 
 h2 {
-	margin-bottom: 0.75rem;
 	color: $signup-title-color;
+
+	@include media(">md") {
+		margin-bottom: 0.75rem;
+	}
+
+	@include media(">sm", '<=md') {
+		margin-bottom: 0.75rem;
+		font-size: global.$font-size-xxxl;
+	}
+
+	@include media('<=sm') {
+		color: global.$color-text-white;
+		margin-bottom: 0.75rem;
+		font-size: global.$font-size-xxxl;
+	}
 }
 
 .sign-up {
+	display: flex;
+	width: 100%;
 	margin-top: $top-spacing;
 	margin-bottom: $bottom-spacing;
 	padding-top: 5rem;
@@ -102,20 +120,47 @@ h2 {
 	background-position: top center;
 }
 
+
 .container {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	flex-direction: column;;
 	max-width: global.$container-width;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
+	align-items: center;
+
+	@include media('>lg') {
+		max-width: global.$container-width;
+		justify-content: space-between;
+	}
+
+	@include media('>sm', '<=lg') {
+		flex-direction: column;
+		margin-left: global.$side-spacing-sm;
+		margin-right: global.$side-spacing-sm;
+	}
+
+	@include media('<=sm') {
+		flex-direction: column;
+		margin-left: global.$side-spacing-sm;
+		margin-right: global.$side-spacing-sm;
+	}
 }
 
 .description {
 	max-width: 38.75rem;
-	margin-bottom: 2.25rem;
 	color: $signup-description-color;
+	text-align: center;
+
+	@include media('>sm') {
+		margin-bottom: 2.25rem;
+	}
+
+	@include media('<=sm') {
+		margin-bottom: 1.75rem;
+		font-size: global.$font-size-md;
+	}
 }
 
 .form {
@@ -141,6 +186,7 @@ h2 {
 .agreement {
 	font-size: global.$font-size-xxxs;
 	color: $signup-description-color;
+	text-align: center;
 }
 
 .input-text {
@@ -153,6 +199,7 @@ h2 {
 }
 
 .input-button {
+	flex-shrink: 0;
 	transition: opacity 380ms global.$ease-out-quint;
 
 	&:hover {
