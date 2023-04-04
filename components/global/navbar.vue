@@ -129,6 +129,7 @@ a {
 
 .social {
 	display: flex;
+	align-items: center;
 
 	@include media('<=sm') {
 		display: none;
