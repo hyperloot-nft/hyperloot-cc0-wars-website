@@ -8,7 +8,7 @@
 				<button class="input-button" type="submit">Sign up</button>
 			</form>
 			<div class="form-response" v-if="isFormSubmitted && !isFormLoading">
-				<div class="form-success" v-if="isFormSubmitSuccess">Thank you.</div>
+				<div class="form-success" v-if="isFormSubmitSuccess">You're all set. Thank you!</div>
 				<div class="form-error" v-else>
 					<template v-if="!isEmailValid">Please enter a valid email.</template>
 					<template v-else-if="!isFormSubmitSuccess">Sorry, something went wrong. Please try again later.</template>
