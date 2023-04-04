@@ -5,7 +5,10 @@
 			<div class="description">Sign up today for a chance to be among the first to play HyperLoot: CC0 Wars beta and receive special in-game items and exclusive digital collectibles.</div>
 			<form class="form" method="POST" @submit.prevent="onSignUpSubmit">
 				<input class="input-text" type="text" name="email" placeholder="Enter your email" required v-model.trim="email" @input="resetForm">
-				<button class="input-button" type="submit">Sign up</button>
+				<button class="input-button" type="submit">
+					<template v-if="isFormLoading"><Loading /></template>
+					<template v-else>Sign up</template>
+				</button>
 			</form>
 			<div class="form-response" v-if="isFormSubmitted && !isFormLoading">
 				<div class="form-success" v-if="isFormSubmitSuccess">You're all set. Thank you!</div>
@@ -84,8 +87,6 @@
 
 @import '@/assets/styles/media-query.scss';
 
-$top-spacing: 12rem;
-$bottom-spacing: 6rem;
 $signup-title-color: #e3efff;
 $signup-description-color: #6A798A;
 
@@ -111,13 +112,28 @@ h2 {
 .sign-up {
 	display: flex;
 	width: 100%;
-	margin-top: $top-spacing;
-	margin-bottom: $bottom-spacing;
-	padding-top: 5rem;
 	background-image: url('/home/hyperloot-cc0wars-signup-bg@2x.png');
 	background-size: 1268px 190px;
 	background-repeat: no-repeat;
 	background-position: top center;
+
+	@include media(">lg") {
+		margin-top: 12rem;
+		margin-bottom: 6rem;
+		padding-top: 5rem;
+	}
+
+	@include media(">sm", "<=lg") {
+		margin-top: 8rem;
+		margin-bottom: 5rem;
+		padding-top: 4rem;
+	}
+
+	@include media("<=sm") {
+		margin-top: 6rem;
+		margin-bottom: 6rem;
+		padding-top: 3rem;
+	}
 }
 
 
@@ -153,11 +169,11 @@ h2 {
 	color: $signup-description-color;
 	text-align: center;
 
-	@include media('>sm') {
+	@include media('>md') {
 		margin-bottom: 2.25rem;
 	}
 
-	@include media('<=sm') {
+	@include media('<=md') {
 		margin-bottom: 1.75rem;
 		font-size: global.$font-size-md;
 	}
@@ -167,7 +183,14 @@ h2 {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	margin-bottom: 2rem;
+
+	@include media('>sm') {
+		margin-bottom: 2rem;
+	}
+
+	@include media('<=sm') {
+		margin-bottom: 1.25rem;
+	}
 }
 
 .form-response {
@@ -199,7 +222,9 @@ h2 {
 }
 
 .input-button {
-	flex-shrink: 0;
+	width: 5.75rem;
+	flex: 0 0 5.75rem;
+	color: global.$color-bg;
 	transition: opacity 380ms global.$ease-out-quint;
 
 	&:hover {
