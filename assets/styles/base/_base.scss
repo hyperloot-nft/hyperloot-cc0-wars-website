@@ -24,3 +24,9 @@
 a {
 	color: color.$color-yellow;
 }
+
+h2 {
+	font-size: typography.$font-size-h2;
+	font-weight: typography.$font-weight-bold;
+	line-height: 1.4;
+}
