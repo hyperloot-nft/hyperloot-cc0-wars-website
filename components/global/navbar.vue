@@ -55,7 +55,8 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: global.$container-width;
+	max-width: global.$container-width;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 3.75rem;
