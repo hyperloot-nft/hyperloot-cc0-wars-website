@@ -111,12 +111,15 @@ a {
 }
 
 .social {
+	display: flex;
+
 	@include media('<=sm') {
 		display: none;
 	}
 }
 
 .social-link {
+	display: flex;
 	cursor: pointer;
 
 	&:not(:last-child) {
