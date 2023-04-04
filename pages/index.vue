@@ -1,9 +1,9 @@
 <template>
-	<div>
+	<NuxtLayout>
 		<PagesHomeHero />
 		<PagesHomeInfo />
 		<PagesHomeSignUp />
-	</div>
+	</NuxtLayout>
 </template>
 
 <script setup>
