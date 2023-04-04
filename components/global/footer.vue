@@ -59,15 +59,15 @@ a {
 		padding-bottom: 2.5rem;
 	}
 
-	@include media('>md', '<=lg') {
+	@include media('>sm', '<=lg') {
 		max-width: 100%;
-		margin-left: global.$side-spacing-md;
-		margin-right: global.$side-spacing-md;
+		margin-left: global.$side-spacing-sm;
+		margin-right: global.$side-spacing-sm;
 		padding-top: 1.25rem;
 		padding-bottom: 1.25rem;
 	}
 
-	@include media('<=md') {
+	@include media('<=sm') {
 		max-width: 100%;
 		margin-left: global.$side-spacing-sm;
 		margin-right: global.$side-spacing-sm;
