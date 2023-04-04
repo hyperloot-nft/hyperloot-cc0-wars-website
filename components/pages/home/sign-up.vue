@@ -70,6 +70,10 @@
 $top-spacing: 5rem;
 $bottom-spacing: 6rem;
 
+h2 {
+	margin-bottom: 0.75rem;
+}
+
 .sign-up {
 	margin-top: $top-spacing;
 	margin-bottom: $bottom-spacing;
@@ -87,6 +91,11 @@ $bottom-spacing: 6rem;
 
 .description {
 	max-width: 38.75rem;
+	color: global.$color-text-darker;
+}
+
+.agreement {
+	font-size: global.$font-size-xxxs;
 }
 </style>
 
