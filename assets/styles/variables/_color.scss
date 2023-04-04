@@ -1,0 +1,38 @@
+/**
+*	_color.scss
+*	This file contains color variables and definitions for the project.
+*	It centralizes the color management, making it easier to maintain
+*	and update the color scheme throughout the application.
+**/
+
+// -----------------------------------------------------------------------------
+// This file contains all the colors.
+// -----------------------------------------------------------------------------
+
+// Base
+$color-bg: #222429;
+
+// Text
+$color-text: #E8E8E8;
+$color-text-white: #ffffff;
+$color-text-dark: #87898B;
+$color-text-darker: #707479;
+$color-text-darkest: #717477;
+
+// Colors
+$color-white: #ffffff;
+$color-black: #000000;
+$color-gray-lightest: #35363C;
+$color-yellow: #f3ba14;
+$color-green: #17D140;
+$color-red: #FB4141;
+
+// Social
+$color-social-twitter: #209BF0;
+$color-social-discord: #5965F5;
+$color-social-opensea: #2381E2;
+
+// Form
+$color-form-bg: #2C2E36;
+$color-form-border: #3D4049;
+$color-form-placeholder: #575960;
