@@ -5,7 +5,10 @@
 			<div class="description">Sign up today for a chance to be among the first to play HyperLoot: CC0 Wars beta and receive special in-game items and exclusive digital collectibles.</div>
 			<form class="form" method="POST" @submit.prevent="onSignUpSubmit">
 				<input class="input-text" type="text" name="email" placeholder="Enter your email" required v-model.trim="email" @input="resetForm">
-				<button class="input-button" type="submit">Sign up</button>
+				<button class="input-button" type="submit">
+					<template v-if="isFormLoading"><Loading /></template>
+					<template v-else>Sign up</template>
+				</button>
 			</form>
 			<div class="form-response" v-if="isFormSubmitted && !isFormLoading">
 				<div class="form-success" v-if="isFormSubmitSuccess">You're all set. Thank you!</div>
