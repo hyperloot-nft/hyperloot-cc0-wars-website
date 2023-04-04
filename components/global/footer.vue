@@ -35,6 +35,7 @@
 </template>
 
 <style lang="scss" scoped>
+@import '@/assets/styles/media-query.scss';
 
 a {
 	transition: opacity 380ms global.$ease-out-quint;
@@ -47,13 +48,32 @@ a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	max-width: global.$container-width;
-	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 1.5rem;
-	padding-bottom: 2.5rem;
 	border-top: 1px solid global.$color-gray-lightest;
+
+	@include media('>lg') {
+		max-width: global.$container-width;
+		width: 100%;
+		padding-top: 1.5rem;
+		padding-bottom: 2.5rem;
+	}
+
+	@include media('>md', '<=lg') {
+		max-width: 100%;
+		margin-left: global.$side-spacing-md;
+		margin-right: global.$side-spacing-md;
+		padding-top: 1.25rem;
+		padding-bottom: 1.25rem;
+	}
+
+	@include media('<=md') {
+		max-width: 100%;
+		margin-left: global.$side-spacing-sm;
+		margin-right: global.$side-spacing-sm;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
 }
 
 .social-link {
