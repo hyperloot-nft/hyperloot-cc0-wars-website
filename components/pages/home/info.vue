@@ -2,16 +2,16 @@
 	<section class="info">
 		<div class="container">
 			<div class="tagline">
-				<h2>Community-owned.<br>Team-based multiplayer.<br>Fast-paced action strategy.</h2>
+				<h2>{{ $t('home.info.tagline1') }}<br>{{ $t('home.info.tagline2') }}<br>{{ $t('home.info.tagline3') }}</h2>
 			</div>
 			<div class="work">
 				<div class="partner">
-					<div class="title">Streamer and influencer partnership</div>
-					<div class="email"><a href="mailto:creator@cc0wars.com?subject=Creator Partnership">creators@cc0wars.com</a></div>
+					<div class="title">{{ $t('home.info.partner.title') }}</div>
+					<div class="email"><a :href="$t('home.info.partner.emailLink')">{{ $t('home.info.partner.email') }}</a></div>
 				</div>
 				<div class="business">
-					<div class="title">Business inquiry</div>
-					<div class="email"><a href="mailto:business@cc0wars.com?subject=Business inquiry">business@cc0wars.com</a></div>
+					<div class="title">{{ $t('home.info.business.title') }}</div>
+					<div class="email"><a :href="$t('home.info.business.emailLink')">{{ $t('home.info.business.email') }}</a></div>
 				</div>
 			</div>
 		</div>

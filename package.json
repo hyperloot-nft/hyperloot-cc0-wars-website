@@ -11,6 +11,7 @@
   "devDependencies": {
     "@nuxt/image-edge": "^1.0.0-28008586.381b906",
     "@nuxtjs/google-fonts": "^3.0.0",
+    "@nuxtjs/i18n": "^8.0.0-beta.10",
     "nuxt": "^3.3.2",
     "sass": "^1.60.0",
     "sass-loader": "^13.2.2"
