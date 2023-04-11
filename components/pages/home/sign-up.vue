@@ -1,23 +1,23 @@
 <template>
 	<section class="sign-up">
 		<div class="container">
-			<h2>Prepare for Battle</h2>
-			<div class="description">Sign up today for a chance to be among the first to play HyperLoot: CC0 Wars beta and receive special in-game items and exclusive digital collectibles.</div>
-			<form class="form" method="POST" @submit.prevent="onSignUpSubmit">
-				<input class="input-text" type="text" name="email" placeholder="Enter your email" required v-model.trim="email" @input="resetForm">
+			<h2>{{ $t('home.signUp.title') }}</h2>
+			<div class="description">{{ $t('home.signUp.description') }}</div>
+			<form class="form" method="POST" @submit.prevent="onsignUpSubmit">
+				<input class="input-text" type="text" name="email" :placeholder="$t('home.signUp.placeholderEmail')" required v-model.trim="email" @input="resetForm">
 				<button class="input-button" type="submit">
 					<template v-if="isFormLoading"><Loading /></template>
-					<template v-else>Sign up</template>
+					<template v-else>{{ $t('home.signUp.button') }}</template>
 				</button>
 			</form>
 			<div class="form-response" v-if="isFormSubmitted && !isFormLoading">
-				<div class="form-success" v-if="isFormSubmitSuccess">You're all set. Thank you!</div>
+				<div class="form-success" v-if="isFormSubmitSuccess">{{ $t('home.signUp.formSubmitted') }}</div>
 				<div class="form-error" v-else>
-					<template v-if="!isEmailValid">Please enter a valid email.</template>
-					<template v-else-if="!isFormSubmitSuccess">Sorry, something went wrong. Please try again later.</template>
+					<template v-if="!isEmailValid">{{ $t('home.signUp.invalidEmail') }}</template>
+					<template v-else-if="!isFormSubmitSuccess">{{ $t('home.signUp.formError') }}</template>
 				</div>
 			</div>
-			<div class="agreement">By signing up, you agree to receive marketing emails from us.</div>
+			<div class="agreement">{{ $t('home.signUp.formAgreement') }}</div>
 		</div>
 	</section>
 </template>
