@@ -35,8 +35,6 @@
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/styles/media-query.scss';
-
 a {
 	transition: opacity 380ms global.$ease-out-quint;
 
@@ -44,6 +42,7 @@ a {
 		opacity: 0.8;
 	}
 }
+
 .container {
 	display: flex;
 	align-items: center;
@@ -53,14 +52,14 @@ a {
 	margin-right: auto;
 	border-top: 1px solid global.$color-gray-lightest;
 
-	@include media('>lg') {
+	@include media.media('>lg') {
 		max-width: global.$container-width;
 		width: 100%;
 		padding-top: 1.5rem;
 		padding-bottom: 2.5rem;
 	}
 
-	@include media('>sm', '<=lg') {
+	@include media.media('>sm', '<=lg') {
 		max-width: 100%;
 		margin-left: global.$side-spacing-sm;
 		margin-right: global.$side-spacing-sm;
@@ -68,7 +67,7 @@ a {
 		padding-bottom: 1.25rem;
 	}
 
-	@include media('<=sm') {
+	@include media.media('<=sm') {
 		max-width: 100%;
 		margin-left: global.$side-spacing-sm;
 		margin-right: global.$side-spacing-sm;

@@ -85,24 +85,22 @@
 
 <style lang="scss" scoped>
 
-@import '@/assets/styles/media-query.scss';
-
 $signup-title-color: #e3efff;
 $signup-description-color: #6A798A;
 
 h2 {
 	color: $signup-title-color;
 
-	@include media(">md") {
+	@include media.media(">md") {
 		margin-bottom: 0.75rem;
 	}
 
-	@include media(">sm", '<=md') {
+	@include media.media(">sm", '<=md') {
 		margin-bottom: 0.75rem;
 		font-size: global.$font-size-xxxl;
 	}
 
-	@include media('<=sm') {
+	@include media.media('<=sm') {
 		color: global.$color-text-white;
 		margin-bottom: 0.75rem;
 		font-size: global.$font-size-xxxl;
@@ -117,19 +115,19 @@ h2 {
 	background-repeat: no-repeat;
 	background-position: top center;
 
-	@include media(">lg") {
+	@include media.media(">lg") {
 		margin-top: 12rem;
 		margin-bottom: 6rem;
 		padding-top: 5rem;
 	}
 
-	@include media(">sm", "<=lg") {
+	@include media.media(">sm", "<=lg") {
 		margin-top: 8rem;
 		margin-bottom: 5rem;
 		padding-top: 4rem;
 	}
 
-	@include media("<=sm") {
+	@include media.media("<=sm") {
 		margin-top: 6rem;
 		margin-bottom: 6rem;
 		padding-top: 3rem;
@@ -146,18 +144,18 @@ h2 {
 	margin-right: auto;
 	align-items: center;
 
-	@include media('>lg') {
+	@include media.media('>lg') {
 		max-width: global.$container-width;
 		justify-content: space-between;
 	}
 
-	@include media('>sm', '<=lg') {
+	@include media.media('>sm', '<=lg') {
 		flex-direction: column;
 		margin-left: global.$side-spacing-sm;
 		margin-right: global.$side-spacing-sm;
 	}
 
-	@include media('<=sm') {
+	@include media.media('<=sm') {
 		flex-direction: column;
 		margin-left: global.$side-spacing-sm;
 		margin-right: global.$side-spacing-sm;
@@ -169,11 +167,11 @@ h2 {
 	color: $signup-description-color;
 	text-align: center;
 
-	@include media('>md') {
+	@include media.media('>md') {
 		margin-bottom: 2.25rem;
 	}
 
-	@include media('<=md') {
+	@include media.media('<=md') {
 		margin-bottom: 1.75rem;
 		font-size: global.$font-size-md;
 	}
@@ -184,11 +182,11 @@ h2 {
 	justify-content: center;
 	width: 100%;
 
-	@include media('>sm') {
+	@include media.media('>sm') {
 		margin-bottom: 2rem;
 	}
 
-	@include media('<=sm') {
+	@include media.media('<=sm') {
 		margin-bottom: 1.25rem;
 	}
 }
