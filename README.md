@@ -5,6 +5,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 ## Table of Contents
 - [Links](#links)
 - [Technologies](#how-to-getting-started)
+- [Project Structure](#project-structure)
 - [How To Get Started](#how-to-getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -143,3 +144,8 @@ fix(form): fix incorrect border color (#138)
 feat/navbar
 fix/footer
 ```
+
+## License
+[MIT](https://github.com/hyperloot-nft/hyperloot-cc0-wars-website/blob/main/README.md)
+
+Copyright (c) 2023-present, HyperLoot
