@@ -5,6 +5,17 @@
 *	styling that affects multiple components or pages.
 **/
 
+// 3rd party styles and functions
+@use 'include-media' as media with (
+	$breakpoints: (
+		xs: 370px,
+		sm: 576px,
+		ipad: 767px,
+		md: 979px,
+		lg: 1324px,
+	)
+);
+
 // import base style
 @import 'base/reset';
 

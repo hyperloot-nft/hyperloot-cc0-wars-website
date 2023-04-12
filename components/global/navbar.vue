@@ -39,8 +39,6 @@
 
 <style lang="scss" scoped>
 
-@import '@/assets/styles/media-query.scss';
-
 $logo-zindex: 1;
 
 img {
@@ -68,18 +66,18 @@ a {
 	margin-right: auto;
 	padding-top: 3.75rem;
 
-	@include media('>lg') {
+	@include query.media('>lg') {
 		max-width: global.$container-width;
 		justify-content: space-between;
 	}
 
-	@include media('>sm', '<=lg') {
+	@include query.media('>sm', '<=lg') {
 		justify-content: space-between;
 		margin-left: global.$side-spacing-sm;
 		margin-right: global.$side-spacing-sm;
 	}
 
-	@include media('<=sm') {
+	@include query.media('<=sm') {
 		justify-content: center;
 		margin-left: global.$side-spacing-sm;
 		margin-right: global.$side-spacing-sm;
@@ -100,7 +98,7 @@ a {
 		display: flex;
 	}
 
-	@include media('<=sm') {
+	@include query.media('<=sm') {
 		display: none;
 	}
 }
@@ -131,7 +129,7 @@ a {
 	display: flex;
 	align-items: center;
 
-	@include media('<=sm') {
+	@include query.media('<=sm') {
 		display: none;
 	}
 }

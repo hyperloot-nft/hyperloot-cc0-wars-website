@@ -32,13 +32,26 @@ export default defineNuxtConfig({
 	modules: [
     	'@nuxt/image-edge',
 		'@nuxtjs/google-fonts',
+		[
+			'@nuxtjs/i18n',
+			{
+				legacy: false,
+				defaultLocale: 'en',
+				langDir: 'locales/',
+				locales: [
+					{ code: 'en', file: 'en.js' },
+				],
+			},
+		],
 	],
-	css: ['~/assets/styles/media-query.scss'],
 	vite: {
 		css: {
 			preprocessorOptions: {
 				scss: {
-					additionalData: '@use "@/assets/styles/global.scss" as global;',
+					additionalData: `
+						@use "@/assets/styles/global.scss" as global;
+						@use "include-media" as query;
+					`,
 				}
 			}
 		}

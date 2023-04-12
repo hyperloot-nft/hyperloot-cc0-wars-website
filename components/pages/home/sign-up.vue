@@ -1,23 +1,23 @@
 <template>
 	<section class="sign-up">
 		<div class="container">
-			<h2>Prepare for Battle</h2>
-			<div class="description">Sign up today for a chance to be among the first to play HyperLoot: CC0 Wars beta and receive special in-game items and exclusive digital collectibles.</div>
-			<form class="form" method="POST" @submit.prevent="onSignUpSubmit">
-				<input class="input-text" type="text" name="email" placeholder="Enter your email" required v-model.trim="email" @input="resetForm">
+			<h2>{{ $t('home.signUp.title') }}</h2>
+			<div class="description">{{ $t('home.signUp.description') }}</div>
+			<form class="form" method="POST" @submit.prevent="onsignUpSubmit">
+				<input class="input-text" type="text" name="email" :placeholder="$t('home.signUp.placeholderEmail')" required v-model.trim="email" @input="resetForm">
 				<button class="input-button" type="submit">
 					<template v-if="isFormLoading"><Loading /></template>
-					<template v-else>Sign up</template>
+					<template v-else>{{ $t('home.signUp.button') }}</template>
 				</button>
 			</form>
 			<div class="form-response" v-if="isFormSubmitted && !isFormLoading">
-				<div class="form-success" v-if="isFormSubmitSuccess">You're all set. Thank you!</div>
+				<div class="form-success" v-if="isFormSubmitSuccess">{{ $t('home.signUp.formSubmitted') }}</div>
 				<div class="form-error" v-else>
-					<template v-if="!isEmailValid">Please enter a valid email.</template>
-					<template v-else-if="!isFormSubmitSuccess">Sorry, something went wrong. Please try again later.</template>
+					<template v-if="!isEmailValid">{{ $t('home.signUp.invalidEmail') }}</template>
+					<template v-else-if="!isFormSubmitSuccess">{{ $t('home.signUp.formError') }}</template>
 				</div>
 			</div>
-			<div class="agreement">By signing up, you agree to receive marketing emails from us.</div>
+			<div class="agreement">{{ $t('home.signUp.formAgreement') }}</div>
 		</div>
 	</section>
 </template>
@@ -85,24 +85,22 @@
 
 <style lang="scss" scoped>
 
-@import '@/assets/styles/media-query.scss';
-
 $signup-title-color: #e3efff;
 $signup-description-color: #6A798A;
 
 h2 {
 	color: $signup-title-color;
 
-	@include media(">md") {
+	@include query.media('>md') {
 		margin-bottom: 0.75rem;
 	}
 
-	@include media(">sm", '<=md') {
+	@include query.media('>sm', '<=md') {
 		margin-bottom: 0.75rem;
 		font-size: global.$font-size-xxxl;
 	}
 
-	@include media('<=sm') {
+	@include query.media('<=sm') {
 		color: global.$color-text-white;
 		margin-bottom: 0.75rem;
 		font-size: global.$font-size-xxxl;
@@ -117,19 +115,19 @@ h2 {
 	background-repeat: no-repeat;
 	background-position: top center;
 
-	@include media(">lg") {
+	@include query.media('>lg') {
 		margin-top: 12rem;
 		margin-bottom: 6rem;
 		padding-top: 5rem;
 	}
 
-	@include media(">sm", "<=lg") {
+	@include query.media('>sm', '<=lg') {
 		margin-top: 8rem;
 		margin-bottom: 5rem;
 		padding-top: 4rem;
 	}
 
-	@include media("<=sm") {
+	@include query.media('<=sm') {
 		margin-top: 6rem;
 		margin-bottom: 6rem;
 		padding-top: 3rem;
@@ -146,18 +144,18 @@ h2 {
 	margin-right: auto;
 	align-items: center;
 
-	@include media('>lg') {
+	@include query.media('>lg') {
 		max-width: global.$container-width;
 		justify-content: space-between;
 	}
 
-	@include media('>sm', '<=lg') {
+	@include query.media('>sm', '<=lg') {
 		flex-direction: column;
 		margin-left: global.$side-spacing-sm;
 		margin-right: global.$side-spacing-sm;
 	}
 
-	@include media('<=sm') {
+	@include query.media('<=sm') {
 		flex-direction: column;
 		margin-left: global.$side-spacing-sm;
 		margin-right: global.$side-spacing-sm;
@@ -169,11 +167,11 @@ h2 {
 	color: $signup-description-color;
 	text-align: center;
 
-	@include media('>md') {
+	@include query.media('>md') {
 		margin-bottom: 2.25rem;
 	}
 
-	@include media('<=md') {
+	@include query.media('<=md') {
 		margin-bottom: 1.75rem;
 		font-size: global.$font-size-md;
 	}
@@ -184,11 +182,11 @@ h2 {
 	justify-content: center;
 	width: 100%;
 
-	@include media('>sm') {
+	@include query.media('>sm') {
 		margin-bottom: 2rem;
 	}
 
-	@include media('<=sm') {
+	@include query.media('<=sm') {
 		margin-bottom: 1.25rem;
 	}
 }

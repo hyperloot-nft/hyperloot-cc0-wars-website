@@ -85,8 +85,6 @@ const closeOverlay = () => {
 
 <style lang="scss">
 
-@import '@/assets/styles/media-query.scss';
-
 $bg-zindex-content: 3;
 $bg-zindex-yellow: 2;
 $bg-zindex-blue: 1;
@@ -99,22 +97,22 @@ $bg-zindex-blue: 1;
 	background-color: global.$color-bg;
 	overflow: hidden;
 
-	@include media('>lg') {
+	@include query.media('>lg') {
 		height: 70rem;
 		padding-top: 3rem;
 	}
 
-	@include media('>md', '<=lg') {
+	@include query.media('>md', '<=lg') {
 		height: 50rem;
 		padding-top: 3rem;
 	}
 
-	@include media('>sm', '<=md') {
+	@include query.media('>sm', '<=md') {
 		height: 40rem;
 		padding-top: 3rem;
 	}
 
-	@include media('<=sm') {
+	@include query.media('<=sm') {
 		height: 32rem;
 		padding-top: 2rem;
 	}
