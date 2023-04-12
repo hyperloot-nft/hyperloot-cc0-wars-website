@@ -19,12 +19,12 @@
 | Production  | https://cc0wars.com/    |
 
 ## Technologies
-- (Nuxt 3)[https://nuxt.com/] - for building Vue.js server-rendered site.
-- (SCSS)(https://sass-lang.com/) - for maintainable and organized styling.
-- (Yarn)(https://yarnpkg.com/) - for package management.
-- (Vercel)(https://vercel.com/) - for staging and production deployment.
-- (Fathom)(https://usefathom.com/) - for analytics.
-- (Include-media) - for maintaining media queries in SCSS.
+- [Nuxt 3](https://nuxt.com/) - for building Vue.js server-rendered site.
+- [SCSS](https://sass-lang.com/) - for maintainable and organized styling.
+- [Yarn](https://yarnpkg.com/) - for package management.
+- [Vercel](https://vercel.com/) - for staging and production deployment.
+- [Fathom](https://usefathom.com/) - for analytics.
+- [Include-media](https://eduardoboucas.github.io/include-media/) - for maintaining media queries in SCSS.
 
 ## Project Structure
 ```
