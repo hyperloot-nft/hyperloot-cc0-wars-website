@@ -3,7 +3,7 @@
 		<div class="container">
 			<h2>{{ $t('home.signUp.title') }}</h2>
 			<div class="description">{{ $t('home.signUp.description') }}</div>
-			<form class="form" method="POST" @submit.prevent="onsignUpSubmit">
+			<form class="form" method="POST" @submit.prevent="onSignUpSubmit">
 				<input class="input-text" type="text" name="email" :placeholder="$t('home.signUp.placeholderEmail')" required v-model.trim="email" @input="resetForm">
 				<button class="input-button" type="submit">
 					<template v-if="isFormLoading"><Loading /></template>
