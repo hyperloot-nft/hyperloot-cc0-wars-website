@@ -20,8 +20,6 @@
 
 <style lang="scss" scoped>
 
-@import '@/assets/styles/media-query.scss';
-
 $work-border-color: #43444D;
 
 a {
@@ -35,11 +33,11 @@ a {
 h2 {
 	line-height: global.$font-line-height-sm;
 
-	@include media(">sm", '<=md') {
+	@include query.media('>sm', '<=md') {
 		font-size: global.$font-size-xxxl;
 	}
 
-	@include media('<=sm') {
+	@include query.media('<=sm') {
 		font-size: global.$font-size-xxl;
 	}
 }
@@ -48,17 +46,17 @@ h2 {
 	display: flex;
 	width: 100%;
 
-	@include media(">lg") {
+	@include query.media('>lg') {
 		margin-top: 12rem;
 		margin-bottom: 12rem;
 	}
 
-	@include media(">sm", "<=lg") {
+	@include query.media('>sm', '<=lg') {
 		margin-top: 8rem;
 		margin-bottom: 8rem;
 	}
 
-	@include media("<=sm") {
+	@include query.media('<=sm') {
 		margin-top: 4rem;
 		margin-bottom: 6rem;
 	}
@@ -73,17 +71,17 @@ h2 {
 	margin-left: auto;
 	margin-right: auto;
 
-	@include media('>lg') {
+	@include query.media('>lg') {
 		max-width: global.$container-width;
 	}
 
-	@include media('>sm', '<=lg') {
+	@include query.media('>sm', '<=lg') {
 		flex-direction: column;
 		margin-left: global.$side-spacing-sm;
 		margin-right: global.$side-spacing-sm;
 	}
 
-	@include media('<=sm') {
+	@include query.media('<=sm') {
 		flex-direction: column;
 		margin-left: global.$side-spacing-sm;
 		margin-right: global.$side-spacing-sm;
@@ -94,11 +92,11 @@ h2 {
 	max-width: 38.75rem;
 	width: 100%;
 
-	@include media('>lg') {
+	@include query.media('>lg') {
 		margin-right: global.$grid-gutter-width;
 	}
 
-	@include media('<=lg') {
+	@include query.media('<=lg') {
 		text-align: center;
 	}
 }
@@ -109,20 +107,20 @@ h2 {
 	justify-content: center;
 	height: 10rem;
 
-	@include media('>lg') {
+	@include query.media('>lg') {
 		padding-top: 0.25rem;
 		padding-left: global.$grid-gutter-width;
 		border-left: 1px solid $work-border-color;
 	}
 
-	@include media('>sm', '<=lg') {
+	@include query.media('>sm', '<=lg') {
 		margin-top: 4rem;
 		padding-top: 4rem;
 		border-top: 1px solid $work-border-color;
 		text-align: center;
 	}
 
-	@include media('<=sm') {
+	@include query.media('<=sm') {
 		margin-top: 3rem;
 		padding-top: 3rem;
 		border-top: 1px solid $work-border-color;
@@ -131,11 +129,11 @@ h2 {
 }
 
 .partner {
-	@include media('>lg') {
+	@include query.media('>lg') {
 		margin-bottom: 1rem;
 	}
 
-	@include media('<=lg') {
+	@include query.media('<=lg') {
 		margin-bottom: global.$side-spacing-sm;
 	}
 }
