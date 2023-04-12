@@ -1,4 +1,5 @@
 # HyperLoot: CC0 Wars Website
+![hyperloot-cc0-wars-github-repo-banner](https://user-images.githubusercontent.com/3419259/231532454-dec0e624-e038-4cea-8bfa-2654be316d86.jpg)
 
 ## Table of Contents
 - [Links](#links)
