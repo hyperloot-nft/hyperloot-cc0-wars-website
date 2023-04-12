@@ -61,6 +61,7 @@
 └── .gitignore            # Git ignore rules
 └── .npmrc                # NPM configuration file
 └── app.vue               # Root Vue component
+└── error.vue             # Error custom page
 └── LICENSE               # License terms for the software code
 └── nuxt.config.js        # Nuxt.js configuration file
 └── package.json          # Dependencies and scripts
