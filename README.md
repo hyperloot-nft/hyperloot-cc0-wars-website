@@ -1,7 +1,5 @@
 # HyperLoot: CC0 Wars Website
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
 ## Table of Contents
 - [Links](#links)
 - [Technologies](#how-to-getting-started)
@@ -146,6 +144,6 @@ fix/footer
 ```
 
 ## License
-[MIT](https://github.com/hyperloot-nft/hyperloot-cc0-wars-website/blob/main/README.md)
+[MIT](https://github.com/hyperloot-nft/hyperloot-cc0-wars-website/blob/main/LICENSE)
 
 Copyright (c) 2023-present, HyperLoot
