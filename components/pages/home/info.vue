@@ -33,7 +33,7 @@ a {
 h2 {
 	line-height: global.$font-line-height-sm;
 
-	@include query.media(">sm", '<=md') {
+	@include query.media('>sm', '<=md') {
 		font-size: global.$font-size-xxxl;
 	}
 
@@ -46,17 +46,17 @@ h2 {
 	display: flex;
 	width: 100%;
 
-	@include query.media(">lg") {
+	@include query.media('>lg') {
 		margin-top: 12rem;
 		margin-bottom: 12rem;
 	}
 
-	@include query.media(">sm", "<=lg") {
+	@include query.media('>sm', '<=lg') {
 		margin-top: 8rem;
 		margin-bottom: 8rem;
 	}
 
-	@include query.media("<=sm") {
+	@include query.media('<=sm') {
 		margin-top: 4rem;
 		margin-bottom: 6rem;
 	}

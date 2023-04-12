@@ -91,11 +91,11 @@ $signup-description-color: #6A798A;
 h2 {
 	color: $signup-title-color;
 
-	@include query.media(">md") {
+	@include query.media('>md') {
 		margin-bottom: 0.75rem;
 	}
 
-	@include query.media(">sm", '<=md') {
+	@include query.media('>sm', '<=md') {
 		margin-bottom: 0.75rem;
 		font-size: global.$font-size-xxxl;
 	}
@@ -115,19 +115,19 @@ h2 {
 	background-repeat: no-repeat;
 	background-position: top center;
 
-	@include query.media(">lg") {
+	@include query.media('>lg') {
 		margin-top: 12rem;
 		margin-bottom: 6rem;
 		padding-top: 5rem;
 	}
 
-	@include query.media(">sm", "<=lg") {
+	@include query.media('>sm', '<=lg') {
 		margin-top: 8rem;
 		margin-bottom: 5rem;
 		padding-top: 4rem;
 	}
 
-	@include query.media("<=sm") {
+	@include query.media('<=sm') {
 		margin-top: 6rem;
 		margin-bottom: 6rem;
 		padding-top: 3rem;
