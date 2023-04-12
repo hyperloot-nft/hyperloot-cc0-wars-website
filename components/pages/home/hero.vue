@@ -97,22 +97,22 @@ $bg-zindex-blue: 1;
 	background-color: global.$color-bg;
 	overflow: hidden;
 
-	@include media.media('>lg') {
+	@include query.media('>lg') {
 		height: 70rem;
 		padding-top: 3rem;
 	}
 
-	@include media.media('>md', '<=lg') {
+	@include query.media('>md', '<=lg') {
 		height: 50rem;
 		padding-top: 3rem;
 	}
 
-	@include media.media('>sm', '<=md') {
+	@include query.media('>sm', '<=md') {
 		height: 40rem;
 		padding-top: 3rem;
 	}
 
-	@include media.media('<=sm') {
+	@include query.media('<=sm') {
 		height: 32rem;
 		padding-top: 2rem;
 	}

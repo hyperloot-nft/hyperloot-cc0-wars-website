@@ -52,14 +52,14 @@ a {
 	margin-right: auto;
 	border-top: 1px solid global.$color-gray-lightest;
 
-	@include media.media('>lg') {
+	@include query.media('>lg') {
 		max-width: global.$container-width;
 		width: 100%;
 		padding-top: 1.5rem;
 		padding-bottom: 2.5rem;
 	}
 
-	@include media.media('>sm', '<=lg') {
+	@include query.media('>sm', '<=lg') {
 		max-width: 100%;
 		margin-left: global.$side-spacing-sm;
 		margin-right: global.$side-spacing-sm;
@@ -67,7 +67,7 @@ a {
 		padding-bottom: 1.25rem;
 	}
 
-	@include media.media('<=sm') {
+	@include query.media('<=sm') {
 		max-width: 100%;
 		margin-left: global.$side-spacing-sm;
 		margin-right: global.$side-spacing-sm;

@@ -50,7 +50,7 @@ export default defineNuxtConfig({
 				scss: {
 					additionalData: `
 						@use "@/assets/styles/global.scss" as global;
-						@use "include-media" as media;
+						@use "include-media" as query;
 					`,
 				}
 			}
