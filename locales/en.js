@@ -11,7 +11,7 @@ export default{
 			},
 			business: {
 				title: "Business inquiry",
-				email: "business{'@'}c0wars.com",
+				email: "business{'@'}cc0wars.com",
 				emailLink: "mailto:business{'@'}cc0wars.com?subject=Business inquiry",
 			},
 		},
